@@ -10,5 +10,9 @@ FROM scratch
 
 COPY --from=build /go/src/app/galene /
 
+COPY ./LICENSE /
+COPY ./static /static
+COPY ./defaults/ /
+
 ENTRYPOINT ["/galene"]
 
